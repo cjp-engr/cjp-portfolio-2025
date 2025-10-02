@@ -78,6 +78,21 @@ accordionItems.forEach((item) => {
 });
 
 /*=============== TESTIMONIALS SWIPER ===============*/
+var testimonialSwiper = new Swiper(".testimonials-swiper", {
+    spaceBetween: 32,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        },
+        1208: {
+            slidesPerView: 3,
+        },
+    },
+});
 
 /*=============== EMAIL JS ===============*/
 
