@@ -32,10 +32,50 @@ var servicesSwiper = new Swiper(".services-swiper", {
 });
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
+var mixer = mixitup('.work-container', {
+    selectors: {
+        target: '.mix'
+    },
+    animation: {
+        duration: 300
+    }
+});
 
 /* Active work */
+const linkWork = document.querySelectorAll('.work-item');
+
+function activeWork() {
+    linkWork.forEach((a) => {
+        a.classList.remove('active-work')
+    });
+
+    this.classList.add('active-work');
+}
+
+linkWork.forEach((a) => a.addEventListener('click', activeWork));
 
 /*=============== RESUME ===============*/
+const accordionItems = document.querySelectorAll('.resume-item');
+
+accordionItems.forEach((item) => {
+    const header = item.querySelector('.resume-header'),
+    content = item.querySelector('.resume-content'),
+    icon = item.querySelector('.resume-icon i');
+
+    header.addEventListener('click', () => {
+        const isOpen = item.classList.toggle('accordion-open');
+        content.style.height = isOpen ? content.scrollHeight + 'px' : '0';
+        icon.className = isOpen ? 'ri-subtract-line' : 'ri-add-line';
+        
+        accordionItems.forEach((otherItem) => {
+            if(otherItem !== item && otherItem.classList.contains('accordion-open')){
+                otherItem.querySelector('.resume-content').style.height = '0';
+                otherItem.querySelector('.resume-icon i').classList = 'ri-add-line';
+                otherItem.classList.remove('accordion-open');
+            }
+        })
+    });
+});
 
 /*=============== TESTIMONIALS SWIPER ===============*/
 
