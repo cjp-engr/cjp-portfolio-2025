@@ -1,9 +1,3 @@
-fetch('../env.json')
-    .then(res => res.json())
-    .then(env => {
-        console.log('MY_SECRET:', env.SERVICE_ID);
-    });
-
 /*=============== MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle');
@@ -42,13 +36,13 @@ const scrollActive = () => {
 
     sections.forEach((current) => {
         const sectionHeight = current.offsetHeight,
-        sectionTop = current.offsetTop,
-        sectionId = current.getAttribute('id'),
-        sectionsClass = document.querySelector('.nav-menu a[href*=' + sectionId + ']');
+            sectionTop = current.offsetTop,
+            sectionId = current.getAttribute('id'),
+            sectionsClass = document.querySelector('.nav-menu a[href*=' + sectionId + ']');
 
-        if(scrollY > sectionTop - 50 && scrollY <= sectionTop + sectionHeight - 50) {
+        if (scrollY > sectionTop - 50 && scrollY <= sectionTop + sectionHeight - 50) {
             sectionsClass.classList.add('active-link');
-        }else{
+        } else {
             sectionsClass.classList.remove('active-link');
         }
     });
@@ -221,3 +215,5 @@ document.querySelectorAll('input[name="body-theme"]').forEach((input) => {
         document.body.className = currentTheme;
     });
 });
+
+
