@@ -1,3 +1,5 @@
+
+
 /*=============== MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle');
@@ -116,7 +118,7 @@ const sendEmail = (e) => {
             message.textContent = '';
         }, 3000);
     } else {
-        emailjs.sendForm('', '', '#contact-form', 'fODgTzgOOW5KcPLym').then(
+        emailjs.sendForm(process.env, '', '#contact-form', 'fODgTzgOOW5KcPLym').then(
             () => {
                 message.classList.add('color-first');
                 message.textContent = 'Message sent ✔';
