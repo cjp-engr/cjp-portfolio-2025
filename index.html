@@ -19,7 +19,7 @@
 
 <body>
   <!--=============== HEADER ===============-->
-  <header class="header">
+  <header class="header" id="header">
     <nav class="nav container">
       <a href="#" class="nav-logo">Carmen</a>
       <div class="nav-menu" id="nav-menu">
@@ -27,31 +27,31 @@
         <ul class="nav-list">
 
           <li class="nav-item">
-            <a href="" class="nav-link">Home</a>
+            <a href="#home" class="nav-link active-link">Home</a>
           </li>
 
           <li class="nav-item">
-            <a href="" class="nav-link">Services</a>
+            <a href="#services" class="nav-link">Services</a>
           </li>
 
           <li class="nav-item">
-            <a href="" class="nav-link">Skills</a>
+            <a href="#skills" class="nav-link">Skills</a>
           </li>
 
           <li class="nav-item">
-            <a href="" class="nav-link">Work</a>
+            <a href="#work" class="nav-link">Work</a>
           </li>
 
           <li class="nav-item">
-            <a href="" class="nav-link">Resume</a>
+            <a href="#resume" class="nav-link">Resume</a>
           </li>
 
           <li class="nav-item">
-            <a href="" class="nav-link">Testimonials</a>
+            <a href="#testimonials" class="nav-link">Testimonials</a>
           </li>
 
           <li class="nav-item">
-            <a href="" class="nav-link">Contact</a>
+            <a href="#contact" class="nav-link">Contact</a>
           </li>
 
         </ul>
@@ -71,6 +71,10 @@
             <i class="ri-github-line"></i>
           </a>
         </div>
+
+        <div class="section-deco deco-left header-deco">
+          <img src="assets/img/shape-1.png" alt="" class="shape">
+        </div>
         <!--=============== End - Social Links ===============-->
       </div>
       <div class="nav-buttons">
@@ -87,7 +91,7 @@
   <!--=============== MAIN ===============-->
   <main class="main">
     <!--=============== HOME ===============-->
-    <section class="home section">
+    <section class="home section" id="home">
       <div class="home-container container">
         <div class="home-content">
           <h2 class="home-subtitle">
@@ -142,11 +146,15 @@
             <a href="#" class="home-link">My Skills</a>
           </div>
         </div>
+
+        <div class="section-deco deco-left">
+          <img src="assets/img/shape-1.png" alt="" class="shape">
+        </div>
       </div>
     </section>
 
     <!--=============== SERVICES ===============-->
-    <section class="services service">
+    <section class="services service" id="services">
       <h2 class="section-title" data-title="My Services">What I Do</h2>
       <div class="container">
         <div class="swiper services-swiper">
@@ -194,38 +202,41 @@
 
           <div class="swiper-pagination"></div>
         </div>
+
+        <div class="section-deco deco-right">
+          <img src="assets/img/shape-1.png" alt="" class="shape">
+        </div>
+
       </div>
     </section>
 
     <!--=============== SKILLS ===============-->
-    <section class="skills section">
+    <section class="skills section" id="skills">
       <h2 class="section-title" data-title="My Talent">Professional Skills</h2>
       <div class="skills-container container grid">
         <div class="skills-item">
           <div class="skills-header">
             <h3 class="skills-name">TypeScript</h3>
-            <span class="skills-value">70 <b>%</b></span>
+            <span class="skills-value">80 <b>%</b></span>
           </div>
           <p class="skills-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            JavaScript with static typing, helping catch errors early and build scalable apps.
           </p>
           <div class="skills-bar">
-            <span class="skills-percentage" style="width: 85%;"></span>
+            <span class="skills-percentage" style="width: 80%;"></span>
           </div>
         </div>
 
         <div class="skills-item">
           <div class="skills-header">
             <h3 class="skills-name">JavaScript</h3>
-            <span class="skills-value">70 <b>%</b></span>
+            <span class="skills-value">75 <b>%</b></span>
           </div>
           <p class="skills-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            The language of the web, enabling interactivity and dynamic behavior in websites.
           </p>
           <div class="skills-bar">
-            <span class="skills-percentage" style="width: 85%;"></span>
+            <span class="skills-percentage" style="width: 75%;"></span>
           </div>
         </div>
 
@@ -235,11 +246,23 @@
             <span class="skills-value">70 <b>%</b></span>
           </div>
           <p class="skills-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            A modern language optimized for building fast apps, especially with the Flutter framework.
           </p>
           <div class="skills-bar">
-            <span class="skills-percentage" style="width: 85%;"></span>
+            <span class="skills-percentage" style="width: 70%;"></span>
+          </div>
+        </div>
+
+        <div class="skills-item">
+          <div class="skills-header">
+            <h3 class="skills-name">HTML and CSS</h3>
+            <span class="skills-value">65 <b>%</b></span>
+          </div>
+          <p class="skills-description">
+            The backbone of the web: HTML structures content, CSS styles it for design and layout.
+          </p>
+          <div class="skills-bar">
+            <span class="skills-percentage" style="width: 65%;"></span>
           </div>
         </div>
 
@@ -249,8 +272,7 @@
             <span class="skills-value">70 <b>%</b></span>
           </div>
           <p class="skills-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            Google’s UI toolkit for building cross-platform apps with a single codebase and great UI.
           </p>
           <div class="skills-bar">
             <span class="skills-percentage" style="width: 85%;"></span>
@@ -260,22 +282,54 @@
         <div class="skills-item">
           <div class="skills-header">
             <h3 class="skills-name">Playwright</h3>
+            <span class="skills-value">80 <b>%</b></span>
+          </div>
+          <p class="skills-description">
+            A modern testing tool for reliable end-to-end browser automation across all major browsers.
+          </p>
+          <div class="skills-bar">
+            <span class="skills-percentage" style="width: 80%;"></span>
+          </div>
+        </div>
+
+        <div class="skills-item">
+          <div class="skills-header">
+            <h3 class="skills-name">Cypress</h3>
+            <span class="skills-value">75 <b>%</b></span>
+          </div>
+          <p class="skills-description">
+            Fast, developer-friendly test automation for modern web apps with real-time reloads.
+          </p>
+          <div class="skills-bar">
+            <span class="skills-percentage" style="width: 75%;"></span>
+          </div>
+        </div>
+
+        <div class="skills-item">
+          <div class="skills-header">
+            <h3 class="skills-name">Patrol</h3>
             <span class="skills-value">70 <b>%</b></span>
           </div>
           <p class="skills-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            A testing framework that enables end-to-end testing of Flutter apps on real devices.
           </p>
           <div class="skills-bar">
             <span class="skills-percentage" style="width: 85%;"></span>
           </div>
         </div>
+
+
+
+        <div class="section-deco deco-left">
+          <img src="assets/img/shape-1.png" alt="" class="shape">
+        </div>
+
       </div>
     </section>
 
 
     <!--=============== WORK ===============-->
-    <section class="work section">
+    <section class="work section" id="work">
       <h2 class="section-title" data-title="My Cases">Portfolio</h2>
 
       <div class="container">
@@ -331,11 +385,15 @@
           </div>
 
         </div>
+
+        <div class="section-deco deco-right">
+          <img src="assets/img/shape-1.png" alt="" class="shape">
+        </div>
       </div>
     </section>
 
     <!--=============== RESUME ===============-->
-    <section class="resume section">
+    <section class="resume section" id="resume">
       <h2 class="section-title" data-title="My Cases">Resume</h2>
       <div class="resume-container container grid">
         <div class="resume-group">
@@ -344,7 +402,7 @@
           <div class="resume-items">
             <div class="resume-item">
               <div class="resume-header">
-                <h3 class="resume-header-title">CoderHouse Courses</h3>
+                <h3 class="resume-header-title">Udemy</h3>
                 <span class="resume-icon">
                   <i class="ri-add-line"></i>
                 </span>
@@ -363,7 +421,7 @@
 
             <div class="resume-item">
               <div class="resume-header">
-                <h3 class="resume-header-title">Lviv National Academy of Arts</h3>
+                <h3 class="resume-header-title">YouTube</h3>
                 <span class="resume-icon">
                   <i class="ri-add-line"></i>
                 </span>
@@ -380,25 +438,6 @@
               </div>
             </div>
 
-            <div class="resume-item">
-              <div class="resume-header">
-                <h3 class="resume-header-title">IT Future</h3>
-                <span class="resume-icon">
-                  <i class="ri-add-line"></i>
-                </span>
-              </div>
-
-              <div class="resume-content">
-                <div class="resume-content-header">
-                  <h3 class="resume-content-title">High School</h3>
-                  <span class="resume-date">2010 - 2012</span>
-                </div>
-
-                <p class="resume-description">Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              </div>
-            </div>
-
           </div>
         </div>
 
@@ -408,10 +447,11 @@
           <div class="resume-items">
             <div class="resume-item">
               <div class="resume-header">
-                <h3 class="resume-header-title">QA Engineer & Flutter Developer - QuickCare</h3>
-                <span class="resume-icon">
-                  <i class="ri-add-line"></i>
-                </span>
+                <h3 class="resume-header-title">QA Engineer & Flutter Developer</h3>
+                <h4 class="resume-header-company">QuickCare</h2>
+                  <span class="resume-icon">
+                    <i class="ri-add-line"></i>
+                  </span>
               </div>
 
               <div class="resume-content">
@@ -427,16 +467,17 @@
 
             <div class="resume-item">
               <div class="resume-header">
-                <h3 class="resume-header-title">QA Engineer - ByteBird</h3>
-                <span class="resume-icon">
-                  <i class="ri-add-line"></i>
-                </span>
+                <h3 class="resume-header-title">QA Engineer</h3>
+                <h4 class="resume-header-company">ByteBird</h2>
+                  <span class="resume-icon">
+                    <i class="ri-add-line"></i>
+                  </span>
               </div>
 
               <div class="resume-content">
                 <div class="resume-content-header">
                   <h3 class="resume-content-title">Remote | USA</h3>
-                  <span class="resume-date">Mar 2023 - Sep 2024</span>
+                  <span class="resume-date"></span>
                 </div>
 
                 <p class="resume-description">Lorem ipsum dolor sit amet,
@@ -446,10 +487,11 @@
 
             <div class="resume-item">
               <div class="resume-header">
-                <h3 class="resume-header-title">Flutter Developer - Workbase</h3>
-                <span class="resume-icon">
-                  <i class="ri-add-line"></i>
-                </span>
+                <h3 class="resume-header-title">Flutter Developer</h3>
+                <h4 class="resume-header-company">Workbase</h2>
+                  <span class="resume-icon">
+                    <i class="ri-add-line"></i>
+                  </span>
               </div>
 
               <div class="resume-content">
@@ -465,10 +507,11 @@
 
             <div class="resume-item">
               <div class="resume-header">
-                <h3 class="resume-header-title">Flutter Developer - Titanware</h3>
-                <span class="resume-icon">
-                  <i class="ri-add-line"></i>
-                </span>
+                <h3 class="resume-header-title">Flutter Developer</h3>
+                <h4 class="resume-header-company">Titanware</h2>
+                  <span class="resume-icon">
+                    <i class="ri-add-line"></i>
+                  </span>
               </div>
 
               <div class="resume-content">
@@ -484,10 +527,11 @@
 
             <div class="resume-item">
               <div class="resume-header">
-                <h3 class="resume-header-title">Flutter Developer - eigital</h3>
-                <span class="resume-icon">
-                  <i class="ri-add-line"></i>
-                </span>
+                <h3 class="resume-header-title">Flutter Developer</h3>
+                <h4 class="resume-header-company">eigital</h2>
+                  <span class="resume-icon">
+                    <i class="ri-add-line"></i>
+                  </span>
               </div>
 
               <div class="resume-content">
@@ -503,10 +547,11 @@
 
             <div class="resume-item">
               <div class="resume-header">
-                <h3 class="resume-header-title">Software QA Engineer - eigital</h3>
-                <span class="resume-icon">
-                  <i class="ri-add-line"></i>
-                </span>
+                <h3 class="resume-header-title">Software QA Engineer</h3>
+                <h4 class="resume-header-company">eigital</h2>
+                  <span class="resume-icon">
+                    <i class="ri-add-line"></i>
+                  </span>
               </div>
 
               <div class="resume-content">
@@ -522,10 +567,11 @@
 
             <div class="resume-item">
               <div class="resume-header">
-                <h3 class="resume-header-title">Manual Tester - CAI-STA Philippines Inc.</h3>
-                <span class="resume-icon">
-                  <i class="ri-add-line"></i>
-                </span>
+                <h3 class="resume-header-title">Manual Tester</h3>
+                <h4 class="resume-header-company">CAI-STA Philippines Inc.</h2>
+                  <span class="resume-icon">
+                    <i class="ri-add-line"></i>
+                  </span>
               </div>
 
               <div class="resume-content">
@@ -542,36 +588,26 @@
           </div>
         </div>
 
+
+        <div class="section-deco deco-left">
+          <img src="assets/img/shape-1.png" alt="" class="shape">
+        </div>
+
       </div>
     </section>
 
     <!--=============== TESTIMONIALS ===============-->
-    <section class="testimonials section">
+    <section class="testimonials section" id="testimonials">
       <h2 class="section-title" data-title="My Customers Say">Testimonials</h2>
       <div class="container">
         <div class="swiper testimonials-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide card">
-              <div class="testimonial-icon">
-                <i class="ri-double-quotes-r"></i>
-              </div>
-              <img src="assets/img/testimonial1.jpg" alt="" class="testimonial-img">
-
-              <p class="testimonial-description">Carmen had been a great member to work with.
-                She is very detail with testing and has a great sense of responsibility.
-                Beside manual testing she also help us in developing our Flutter app and create a new
-                automation testing system for Flutter.</p>
-
-              <h3 class="testimonial-name">Joe G.</h3>
-              <span class="testimonial-author">Software Engineer</span>
-
-            </div>
 
             <div class="swiper-slide card">
               <div class="testimonial-icon">
                 <i class="ri-double-quotes-r"></i>
               </div>
-              <img src="assets/img/testimonial2.jpg" alt="" class="testimonial-img">
+              <img src="assets/img/testimonial2.png" alt="" class="testimonial-img">
               <p class="testimonial-description">Carmen is one of those engineers on your team that
                 accelerates and increase the quality of changes that goes out to your customers.
                 A strong self-starter who can work independently and within a team, she was instrumental
@@ -590,19 +626,7 @@
               <div class="testimonial-icon">
                 <i class="ri-double-quotes-r"></i>
               </div>
-              <img src="assets/img/testimonial3.jpg" alt="" class="testimonial-img">
-              <p class="testimonial-description">Carmen works diligently, balancing efficiency with
-                meticulous attention to detail. I believe her background in testing makes her a stronger
-                developer, as she brings valuable insight from both a QA and developer perspective</p>
-              <h3 class="testimonial-name">Robin M</h3>
-              <span class="testimonial-author">Sr. Software Engineer</span>
-            </div>
-
-            <div class="swiper-slide card">
-              <div class="testimonial-icon">
-                <i class="ri-double-quotes-r"></i>
-              </div>
-              <img src="assets/img/testimonial4.jpg" alt="" class="testimonial-img">
+              <img src="assets/img/testimonial4.png" alt="" class="testimonial-img">
               <p class="testimonial-description">I had the privilege of working with Carmen when we were both
                 Software QA Engineers at Eigital. At the time, I was her senior, but even as a junior QA,
                 Carmen demonstrated skills and expertise that exceeded expectations. She is highly focused on her work,
@@ -618,19 +642,7 @@
               <div class="testimonial-icon">
                 <i class="ri-double-quotes-r"></i>
               </div>
-              <img src="assets/img/testimonial5.jpg" alt="" class="testimonial-img">
-              <p class="testimonial-description">Really good and frendly team member with QA manual testing and E2E
-                testing.
-                Keeping the app running smooth and safe.</p>
-              <h3 class="testimonial-name">Chi P.</h3>
-              <span class="testimonial-author">Senior Developer</span>
-            </div>
-
-            <div class="swiper-slide card">
-              <div class="testimonial-icon">
-                <i class="ri-double-quotes-r"></i>
-              </div>
-              <img src="assets/img/testimonial5.jpg" alt="" class="testimonial-img">
+              <img src="assets/img/testimonial6.png" alt="" class="testimonial-img">
               <p class="testimonial-description">
 
                 I can't recommend Carmen enough.
@@ -646,17 +658,62 @@
                 Carmen is a valuable addition to a team that needs a conscientious and diligent worker.</p>
               <h3 class="testimonial-name">David K.</h3>
               <span class="testimonial-author">Lead Developer</span>
+
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="testimonial-icon">
+                <i class="ri-double-quotes-r"></i>
+              </div>
+              <img src="assets/img/testimonial1.png" alt="" class="testimonial-img">
+
+              <p class="testimonial-description">Carmen had been a great member to work with.
+                She is very detail with testing and has a great sense of responsibility.
+                Beside manual testing she also help us in developing our Flutter app and create a new
+                automation testing system for Flutter.</p>
+
+              <h3 class="testimonial-name">Joe G.</h3>
+              <span class="testimonial-author">Software Engineer</span>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="testimonial-icon">
+                <i class="ri-double-quotes-r"></i>
+              </div>
+              <img src="assets/img/testimonial3.png" alt="" class="testimonial-img">
+              <p class="testimonial-description">Carmen works diligently, balancing efficiency with
+                meticulous attention to detail. I believe her background in testing makes her a stronger
+                developer, as she brings valuable insight from both a QA and developer perspective</p>
+              <h3 class="testimonial-name">Robin M</h3>
+              <span class="testimonial-author">Sr. Software Engineer</span>
+            </div>
+
+            <div class="swiper-slide card">
+              <div class="testimonial-icon">
+                <i class="ri-double-quotes-r"></i>
+              </div>
+              <img src="assets/img/testimonial5.png" alt="" class="testimonial-img">
+              <p class="testimonial-description">Really good and frendly team member with QA manual testing and E2E
+                testing.
+                Keeping the app running smooth and safe.</p>
+              <h3 class="testimonial-name">Chi P.</h3>
+              <span class="testimonial-author">Senior Developer</span>
             </div>
 
           </div>
 
           <div class="swiper-pagination"></div>
         </div>
+
+        <div class="section-deco deco-right">
+          <img src="assets/img/shape-1.png" alt="" class="shape">
+        </div>
+
       </div>
     </section>
 
     <!--=============== CONTACT ===============-->
-    <section class="contact section">
+    <section class="contact section" id="contact">
       <h2 class="section-title" data-title="Let's Talk About Ideas">Contact Me</h2>
       <div class="contact-container container grid">
         <div class="contact-content">
@@ -735,12 +792,40 @@
             </div>
             <p class="message" id="message"></p>
         </form>
+
+        <div class="section-deco deco-left">
+          <img src="assets/img/shape-1.png" alt="" class="shape">
+        </div>
+
       </div>
     </section>
   </main>
 
   <!--=============== FOOTER ===============-->
-  
+  <footer class="footer">
+    <div class="footer-container container">
+      <div class="footer-socials social-links">
+        <a href="https://www.linkedin.com/in/carmen9696/" target="_blank" class="social-link">
+          <i class="ri-linkedin-box-line"></i>
+        </a>
+
+        <a href="https://www.instagram.com/cjp_flutter1st/" target="_blank" class="social-link">
+          <i class="ri-instagram-line"></i>
+        </a>
+
+        <a href="https://github.com/cjp-engr" target="_blank" class="social-link">
+          <i class="ri-github-line"></i>
+        </a>
+      </div>
+      <p class="footer-copyright">
+        © 2025 <span>Carmen</span>. All Rights Reserved
+      </p>
+      <p class="footer-copyright">
+        Developed by <span>Carmen</span>
+      </p>
+    </div>
+  </footer>
+
 
   <!--=============== STYLE SWITCHER ===============-->
   <div class="style-switcher" id="style-switcher">
@@ -806,7 +891,7 @@
   </script>
 
   <!--=============== JS ===============-->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" type="module"></script>
 </body>
 
 </html>
