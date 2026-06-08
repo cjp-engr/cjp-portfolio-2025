@@ -131,6 +131,8 @@ var testimonialSwiper = new Swiper(".testimonials-swiper", {
 });
 
 /*=============== EMAIL JS ===============*/
+emailjs.init({ publicKey: EMAILJS_CONFIG.publicKey });
+
 const contactForm = document.getElementById('contact-form'),
     contactName = document.getElementById('contact-name'),
     contactEmail = document.getElementById('contact-email'),
@@ -152,7 +154,12 @@ const sendEmail = (e) => {
             message.textContent = '';
         }, 3000);
     } else {
-        emailjs.sendForm(process.env, '', '#contact-form', 'fODgTzgOOW5KcPLym').then(
+        emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, {
+            name: contactName.value,
+            email: contactEmail.value,
+            subject: contactSubject.value,
+            message: contactMessage.value,
+        }).then(
             () => {
                 message.classList.add('color-first');
                 message.textContent = 'Message sent ✔';
