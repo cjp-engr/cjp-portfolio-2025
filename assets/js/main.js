@@ -130,9 +130,7 @@ var testimonialSwiper = new Swiper(".testimonials-swiper", {
     },
 });
 
-/*=============== EMAIL JS ===============*/
-emailjs.init({ publicKey: EMAILJS_CONFIG.publicKey });
-
+/*=============== CONTACT FORM ===============*/
 const contactForm = document.getElementById('contact-form'),
     contactName = document.getElementById('contact-name'),
     contactEmail = document.getElementById('contact-email'),
@@ -140,7 +138,7 @@ const contactForm = document.getElementById('contact-form'),
     contactMessage = document.getElementById('contact-message'),
     message = document.getElementById('message');
 
-const sendEmail = (e) => {
+const sendEmail = async (e) => {
     e.preventDefault();
 
     if (contactName.value === '' || contactEmail.value === '' || contactSubject.value === '' ||
@@ -154,31 +152,38 @@ const sendEmail = (e) => {
             message.textContent = '';
         }, 3000);
     } else {
-        emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, {
-            name: contactName.value,
-            email: contactEmail.value,
-            subject: contactSubject.value,
-            message: contactMessage.value,
-        }).then(
-            () => {
+        try {
+            const res = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: contactName.value,
+                    email: contactEmail.value,
+                    subject: contactSubject.value,
+                    message: contactMessage.value,
+                }),
+            });
+
+            if (res.ok) {
                 message.classList.add('color-first');
                 message.textContent = 'Message sent ✔';
 
                 setTimeout(() => {
                     message.textContent = '';
                 }, 5000);
-            },
-            (error) => {
-                alert('OOPs! SOMETHING WENT WRONG...', error);
-            },
-        );
 
-        contactName.value = '';
-        contactEmail.value = '';
-        contactSubject.value = '';
-        contactMessage.value = '';
+                contactName.value = '';
+                contactEmail.value = '';
+                contactSubject.value = '';
+                contactMessage.value = '';
+            } else {
+                alert('OOPs! SOMETHING WENT WRONG...');
+            }
+        } catch {
+            alert('OOPs! SOMETHING WENT WRONG...');
+        }
     }
-}
+};
 
 contactForm.addEventListener('submit', sendEmail);
 
