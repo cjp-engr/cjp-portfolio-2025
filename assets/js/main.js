@@ -205,6 +205,15 @@ colors.forEach((color) => {
     }
 });
 
+/*=============== TESTIMONIAL EXPAND/COLLAPSE ===============*/
+document.querySelectorAll('.testimonial-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const desc = btn.previousElementSibling;
+        desc.classList.toggle('expanded');
+        btn.textContent = desc.classList.contains('expanded') ? 'Read less' : 'Read more';
+    });
+});
+
 /*=============== LIGHT/DARK MODE ===============*/
 let currentTheme = 'light';
 document.body.className = currentTheme;
